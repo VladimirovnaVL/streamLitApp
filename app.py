@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as stl
 
 # Define the recipes and their ingredients
 recipes = {
@@ -10,19 +10,19 @@ recipes = {
 }
 
 # Set the title of the Streamlit app
-st.title("Cooking Application")
+stl.title("Cooking Application")
 
 # Display the list of recipes
-st.header("Select a Recipe")
-recipe_name = st.selectbox("Choose a recipe:", list(recipes.keys()))
+stl.header("Select a Recipe :)")
+recipe_name = stl.selectbox("Choose a recipe:", list(recipes.keys()))
 
 # Display the ingredients for the selected recipe
 if recipe_name:
-    st.header(f"Ingredients for {recipe_name}")
+    stl.header("Ingredients for {recipe_name}")
     ingredients = recipes[recipe_name]
     for ingredient in ingredients:
-        st.write(f"- {ingredient}")
+        stl.write(f"- {ingredient}")
 
 # Run the Streamlit app
 if __name__ == "__main__":
-    st.write("Welcome to the Cooking Application!")
+    stl.write("Welcome to the Cooking Application!")
