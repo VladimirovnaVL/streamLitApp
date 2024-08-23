@@ -18,7 +18,7 @@ recipe_name = stl.selectbox("Choose a recipe:", list(recipes.keys()))
 
 # Display the ingredients for the selected recipe
 if recipe_name:
-    stl.header("Ingredients for {recipe_name}")
+    stl.header(f"Ingredients for {recipe_name}")
     ingredients = recipes[recipe_name]
     for ingredient in ingredients:
         stl.write(f"- {ingredient}")
